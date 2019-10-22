@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: scottstoutaks1 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: scottstoutaks1 
+    spec:
+      containers:
+        - name: scottstoutaks1 
+          image: scottstout.azurecr.io/scottstoutaks1
+          ports:
+          - containerPort: 8080
